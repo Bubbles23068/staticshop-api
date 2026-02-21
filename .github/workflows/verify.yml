@@ -9,6 +9,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 24f1002371@ds.study.iitm.ac.in
-        run: |
-          echo "Verification step for 24f1002371@ds.study.iitm.ac.in"
-          echo "Current Date: $(date)"
+        run: echo "Verification step"
