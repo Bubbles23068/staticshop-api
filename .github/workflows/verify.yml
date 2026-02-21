@@ -1,0 +1,14 @@
+name: Email Verification Action
+on: [push, workflow_dispatch]
+
+jobs:
+  verify-user:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: 24f1002371@ds.study.iitm.ac.in
+        run: |
+          echo "Verification step for 24f1002371@ds.study.iitm.ac.in"
+          echo "Current Date: $(date)"
