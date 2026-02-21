@@ -28,6 +28,10 @@
     "clothing": {
       "count": 4,
       "inventoryValue": 85429.06
+    },
+    "books": {
+      "count": 3,
+      "inventoryValue": 100297.04
     }
   }
 }
