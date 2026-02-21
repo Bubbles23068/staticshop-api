@@ -1,0 +1,25 @@
+name: Speed Up CI with Caching
+on: [push, workflow_dispatch]
+
+jobs:
+  cache-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Create a dummy file to provide something to cache
+      - name: Create Dummy Dependency
+        run: echo "important-data" > dependency.txt
+
+      - name: Setup Cache
+        id: cache-step
+        uses: actions/cache@v4
+        with:
+          path: dependency.txt
+          key: cache-c50f228
+
+      - name: prime-cache-c50f228
+        run: |
+          echo "Cache hit: ${{ steps.cache-step.outputs.cache-hit }}"
+          echo "If this is the first run, it will be empty or 'false'."
